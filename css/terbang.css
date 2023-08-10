@@ -1,0 +1,152 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: backdrop-filter 0.3s ease-out;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0); /* For Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+}
+
+nav h1{
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    color: rgb(192, 10, 10);
+}
+
+.nav.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+    backdrop-filter: blur(5px); /* Add blur effect to the footer background */
+}
+
+/* navbar blur */
+
+.nav.blur-bg {
+    backdrop-filter: blur(5px); /* Tambahkan efek blur */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+}
+
+.background {
+	height: 100vh;
+    width: 100vw;
+    background: linear-gradient(100deg, #e99696, #ffffff, #db8b8b);
+}
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(rgb(202, 64, 64) 50%, rgb(233, 6, 6));
+	border: 5px solid black;
+}
+
+.tutor{
+    color: red;
+}
+
+.message p{
+    font-size: 25px;
+}
+
+.message {
+    margin-top: 200px;
+	position: absolute;
+	z-index: 10;
+	color: black;
+	top: 30%;
+	left: 50%;
+	font-size: 4em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.messageStyle{
+	background: white;
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+}
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 10vh;
+	font-size: 10vh;
+	font-weight: 100;
+	color: white;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+    margin-top: 60px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.score_val {
+	color: rgb(253, 0, 0);
+	font-weight: bold;
+}
+@media only screen and (max-width: 1080px) {
+    .message{
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score{
+		font-size: 8vh;
+	}
+	.bird{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
+
+.gas {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: rgb(192, 10, 10);
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gas:hover {
+    background-color: rgb(150, 5, 5);
+}
+
+.gas:active {
+    transform: scale(0.95);
+    background-color: rgb(120, 0, 0);
+}

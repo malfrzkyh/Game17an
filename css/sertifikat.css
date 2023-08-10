@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container{
+    overflow: hidden;
+}
+
+.gambar{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.gas {
+    position: relative;
+    bottom: 1000px;
+    z-index: 9999;
+    font-family: 'Lilita One', cursive;
+    padding: 12px 20px;
+    background-color: rgb(192, 10, 10);
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gas:hover {
+    background-color: rgb(150, 5, 5);
+}
+
+.gas:active {
+    transform: scale(0.95);
+    background-color: rgb(120, 0, 0);
+}

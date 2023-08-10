@@ -1,0 +1,245 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Caprasimo', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Lilita One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'REM', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+/* CSS lainnya */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: backdrop-filter 0.3s ease-out;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0); /* For Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+}
+
+nav h1{
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    color: rgb(192, 10, 10);
+}
+
+.nav.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+    backdrop-filter: blur(5px); /* Add blur effect to the footer background */
+}
+
+/* navbar blur */
+
+.nav.blur-bg {
+    backdrop-filter: blur(5px); /* Tambahkan efek blur */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+}
+
+/* mulai */
+    body{
+        background: linear-gradient(50deg, #461414, #e22424, #2c0909);
+    }
+
+  .wrapper {
+    box-sizing: content-box;
+    width: 26.87em;
+    padding: 2.5em 3em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+
+  #moves-count,
+    #time {
+    font-size: 25px;
+  font-family: 'Lilita One', cursive;
+  color: rgb(105, 2, 2);
+}
+
+.stats-container {
+    text-align: center;
+    margin-bottom: 1.2em;
+  }
+  .stats-container span {
+    font-family: 'Lilita One', cursive;
+    font-size: 25px;
+    color: rgb(105, 2, 2);
+  }
+
+  .card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+  }
+
+
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+
+
+  .card-before {
+    background: linear-gradient(200deg, #f84040, #a51409, #b31313);
+    font-size: 2.8em;
+    font-weight: 600;
+    color: white;
+  }
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .controls-container {
+    background: linear-gradient(200deg, #461414, #e22424, #2c0909);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+  }
+
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .controls-container button {
+    font-family: 'Lilita One', cursive;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: rgb(192, 10, 10);
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+    font-family: 'Lilita One', cursive;
+    color: white;
+  }
+  #result h2 {
+    color: rgb(255, 196, 0);
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+
+  .gas {
+    font-family: 'Lilita One', cursive;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: rgb(192, 10, 10);
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gas:hover {
+    background-color: rgb(150, 5, 5);
+}
+
+.gas:active {
+    transform: scale(0.95);
+    background-color: rgb(120, 0, 0);
+}
+
+.kembali{
+    font-size: 18px;
+}
+
+.rules {
+  background-color: rgba(145, 29, 29, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.rules h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Lilita One', cursive;
+}
+
+.rules p {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Lilita One', cursive;
+}

@@ -1,0 +1,249 @@
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Caprasimo', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Lilita One', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'REM', sans-serif;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+/* CSS lainnya */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: backdrop-filter 0.3s ease-out;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0); /* For Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 4px 12px -3px rgba(0,0,0,0.4);
+}
+
+nav h1{
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    color: rgb(192, 10, 10);
+}
+
+.nav.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+    backdrop-filter: blur(5px); /* Add blur effect to the footer background */
+}
+
+/* navbar blur */
+
+.nav.blur-bg {
+    backdrop-filter: blur(5px); /* Tambahkan efek blur */
+    -webkit-backdrop-filter: blur(5px); /* For Safari */
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color with white and blur effect */
+}
+
+
+/* selesai navbar */
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section1 {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section2{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.section3 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    text-align: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.section2 {
+    background: linear-gradient(200deg, #461414, #e22424, #2c0909);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    text-align: center; 
+}
+
+.katakata p{
+    margin-top: 15px;
+}
+
+.katakata h1{
+    font-family: 'Lilita One', cursive;
+    font-size: 60px;
+}
+
+.katakata{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 25px;
+    width: 900px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.section3 {
+    background-color: red;
+    color: white;
+}
+
+@keyframes slideUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.hormat img {
+    animation: slideUpDown 3s ease infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .section2 {
+        height: 250vh;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    
+    .katakata {
+        width: 100%;
+        max-width: 300px; /* Atur max-width gambar sesuai kebutuhan */
+    }
+
+    .hormat img{
+        width: 500px;
+    }
+}
+
+.gas {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background-color: rgb(192, 10, 10);
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gas:hover {
+    background-color: rgb(150, 5, 5);
+}
+
+.gas:active {
+    transform: scale(0.95);
+    background-color: rgb(120, 0, 0);
+}
+
+/* pilihgame section */
+
+.pilih {
+    overflow: hidden;
+    display: flex;
+  }
+
+  .game1,
+  .game2,
+  .game3 {
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .game1 img,
+  .game2 img,
+  .game3 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .game1:hover,
+.game2:hover,
+.game3:hover {
+    background-color: #ddd; 
+}
+
+.game1 img,
+.game2 img,
+.game3 img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.game1:hover img,
+.game2:hover img,
+.game3:hover img {
+    transform: scale(1.05); 
+}
